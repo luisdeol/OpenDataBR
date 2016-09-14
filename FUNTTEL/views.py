@@ -8,7 +8,6 @@ from rest_framework.response import Response
 from FUNTTEL.FUNTTEL_Utils import updateDB
 from bson.json_util import dumps
 import json
-from collections import OrderedDict
 
 
 @api_view(['GET'])
