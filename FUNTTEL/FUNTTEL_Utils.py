@@ -10,7 +10,6 @@ def connectDb():
     return db;
 
 def updateDB():
-    row_list = []
     csvfile = open('C:/Users/luisdeolpy/Documents/Python Scripts/OpenDataBR/FUNTTEL/indicadores-funttel.csv')
     spamreader = csv.reader (csvfile, delimiter = ';')
     headers = next(spamreader, None)
@@ -26,6 +25,5 @@ def updateDB():
             "2013": row[3],
             "2014": row[4]
         })
-        row_list.append(row)
 
 
