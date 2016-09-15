@@ -48,3 +48,11 @@ def getPropriedadeIntelectualBRExterior(request):
     #updateDB()
     return Response(jsonstrindent)
 
+@api_view(['GET'])
+def getProducaoTecnicoCientifica(request):
+    db = connectDb()
+    prodTecnicoCientifica = db.GeraçãodeConhecimentoProduçãoTécnicoCientífica
+    jsonstr = dumps(prodTecnicoCientifica.find())
+    jsonstrindent = json.loads(jsonstr)
+    #updateDB()
+    return Response(jsonstrindent)
