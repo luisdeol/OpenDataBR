@@ -2,5 +2,6 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns(
     'TaxaIncidenciaDengue.views',
-        url(r'^getTaxaIncidenciaDengue/$', 'getTaxaIncidenciaDengue', name='getTaxaIncidenciaDengue'),
+    url(r'^getTaxaIncidenciaDengueUF/$', 'getTaxaIncidenciaDengueUF', name='getTaxaIncidenciaDengueUF'),
+    url(r'^getTaxaIncidenciaDengueBrasil/$', 'getTaxaIncidenciaDengueBrasil', name='getTaxaIncidenciaDengueBrasil')
 )
