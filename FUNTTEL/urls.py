@@ -6,6 +6,6 @@ urlpatterns = patterns(
     url(r'^getGeracaoEmprego/$', 'getGeracaoEmprego', name='getGeracaoEmprego'),
     url(r'^getComercializaveis/$', 'getComercializaveis', name='getComercializaveis'),
     url(r'^getPropriedadeIntelectualBRExterior/$', 'getPropriedadeIntelectualBRExterior', name='getPropriedadeIntelectualBRExterior'),
-    url(r'^getProducaoTecnicoCientifica/$', 'getProducaoTecnicoCientifica', name='getProducaoTecnicoCientifica')
-
+    url(r'^getProducaoTecnicoCientifica/$', 'getProducaoTecnicoCientifica', name='getProducaoTecnicoCientifica'),
+    url(r'^getDesenvolvimentoPessoas/$', 'getDesenvolvimentoPessoas', name='getDesenvolvimentoPessoas')
 )

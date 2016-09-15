@@ -56,3 +56,12 @@ def getProducaoTecnicoCientifica(request):
     jsonstrindent = json.loads(jsonstr)
     #updateDB()
     return Response(jsonstrindent)
+
+@api_view(['GET'])
+def getDesenvolvimentoPessoas(request):
+    db = connectDb()
+    desenvPessoas = db.GeraçãodeConhecimentoDesenvolvimentodePessoas
+    jsonstr = dumps(desenvPessoas.find())
+    jsonstrindent = json.loads(jsonstr)
+    #updateDb()
+    return Response(jsonstrindent)
