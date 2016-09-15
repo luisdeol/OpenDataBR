@@ -44,7 +44,7 @@ def getPropriedadeIntelectualBRExterior(request):
     db = connectDb()
     propIntelectual = db.InovaçãoTecnológicaPropriedadeIntelectualBrasileExterior
     jsonstr = dumps(propIntelectual.find())
-    jsonstrindent = json.load(jsonstr)
+    jsonstrindent = json.loads(jsonstr)
     #updateDB()
     return Response(jsonstrindent)
 
