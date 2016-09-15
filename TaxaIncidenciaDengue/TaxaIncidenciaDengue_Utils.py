@@ -69,3 +69,25 @@ def updateDb_Br():
             "2007": row[18],
             "2008": row[19]
         })
+
+def updateDb_Capitais():
+    csvfile = open('C:/Users/luisdeolpy/Documents/GitHub/OpenDataBR/TaxaIncidenciaDengue/series_historicas_dengue_Capitais.csv')
+    spamreader = csv.reader (csvfile, delimiter = ';')
+    headers = next(spamreader, None)
+    incidencias = db.IncidenciasCapitais
+    title = ""
+    for row in spamreader:
+        desc = row[0]
+        incidencias.insert_one({
+            "Description": desc,
+            "1999": row[0],
+            "2000": row[1],
+            "2001": row[2],
+            "2002": row[3],
+            "2003": row[4],
+            "2004": row[5],
+            "2005": row[6],
+            "2006": row[7],
+            "2007": row[8],
+            "2008": row[9]
+        })
